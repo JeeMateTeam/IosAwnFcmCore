@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		054775C82F3E9397008B016E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pods.xcodeproj; path = ../Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0598D1112B37B2F400F59E69 /* JsonFlattenerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFlattenerTest.swift; sourceTree = "<group>"; };
 		0C86D538F81C4968614E1AFE /* Pods-IosAwnFcmCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAwnFcmCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-IosAwnFcmCore_Example/Pods-IosAwnFcmCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		328CAA107FB537D2E4B56EE5 /* Pods-IosAwnFcmCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAwnFcmCore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IosAwnFcmCore_Tests/Pods-IosAwnFcmCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				054775C82F3E9397008B016E /* Pods.xcodeproj */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for IosAwnFcmCore */,
 				607FACE81AFB9204008FA782 /* Tests */,
