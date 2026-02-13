@@ -272,8 +272,6 @@ open class AwesomeFcmService {
         notification.content?.displayedLifeCycle = initialLifeCycle
         contentInProgress.userInfo[Definitions.NOTIFICATION_MODEL_CONTENT] = notification.toMap()
         
-        validateWatermark(notification: &notification, contentInProgress: &contentInProgress)
-        
         if (userInfo["gcm.n.noui"] as? Bool) ?? false { return true }
         
         try NotificationSenderAndScheduler.send(
@@ -283,41 +281,6 @@ open class AwesomeFcmService {
             completion: completion,
             appLifeCycle: LifeCycleManager.shared.currentLifeCycle)
         return true
-    }
-    
-    func validateWatermark(
-        notification:inout NotificationModel,
-        contentInProgress: inout UNMutableNotificationContent
-    ) {
-        var isLicenseKeyValid = false
-        do {
-            isLicenseKeyValid = try LicenseManager.shared.isLicenseKeyValid()
-        }
-        catch {
-            if !(error is AwesomeNotificationsException) {
-                ExceptionFactory
-                    .shared
-                    .registerNewAwesomeException(
-                        className: AwesomeFcmService.TAG,
-                        code: ExceptionCode.CODE_INVALID_ARGUMENTS,
-                        message: "AwesomeFcmService received a invalid license key",
-                        detailedCode: ExceptionCode.DETAILED_INVALID_ARGUMENTS + ".isLicenseKeyValid.invalid")
-            }
-        }
-        if isLicenseKeyValid { return }
-        
-        contentInProgress.title = notification.content?.title ?? contentInProgress.title
-        contentInProgress.body = notification.content?.body ?? contentInProgress.body
-        
-        if !StringUtils.shared.isNullOrEmpty(contentInProgress.title) {
-            contentInProgress.title = "[DEMO] \(contentInProgress.title)"
-            notification.content?.title = contentInProgress.title
-        } else {
-            if !StringUtils.shared.isNullOrEmpty(contentInProgress.body) {
-                contentInProgress.body = "[DEMO] \(contentInProgress.body)"
-                notification.content?.body = contentInProgress.body
-            }
-        }
     }
     
     func getMessageIdInString(userInfo: [AnyHashable : Any]) -> String?{
