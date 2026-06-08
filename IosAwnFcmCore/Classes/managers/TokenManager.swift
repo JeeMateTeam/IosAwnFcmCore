@@ -9,6 +9,7 @@ import Foundation
 import IosAwnCore
 import FirebaseCore
 import FirebaseMessaging
+import UIKit
 
 public class TokenManager {
     private let TAG = "TokenManager"

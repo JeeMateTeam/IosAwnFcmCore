@@ -7,6 +7,8 @@
 
 import Foundation
 import IosAwnCore
+import UIKit
+import UserNotifications
 
 open class AwesomeFcmService {
     static let TAG = "AwesomeFcmService"
