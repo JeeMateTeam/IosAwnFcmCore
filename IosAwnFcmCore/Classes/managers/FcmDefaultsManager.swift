@@ -46,9 +46,4 @@ public class FcmDefaultsManager {
         get { return Int64(userDefaults.object(forKey: FcmDefinitions.DART_BG_HANDLE) as? Int64 ?? 0) }
         set { userDefaults.setValue(newValue, forKey: FcmDefinitions.DART_BG_HANDLE) }
     }
-    
-    public var licenseKeys:[String]? {
-        get { return userDefaults.object(forKey: FcmDefinitions.LICENSE_KEYS) as? [String] }
-        set { userDefaults.setValue(newValue ?? [], forKey: FcmDefinitions.LICENSE_KEYS) }
-    }
 }
