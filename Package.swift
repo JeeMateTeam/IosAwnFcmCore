@@ -13,9 +13,7 @@ let package = Package(
         .library(name: "IosAwnFcmCore", targets: ["IosAwnFcmCore"])
     ],
     dependencies: [
-        // Local path during the migration; switch to the released tag before publishing:
-        //   .package(url: "https://github.com/rafaelsetragni/IosAwnCore.git", from: "0.12.0")
-        .package(name: "IosAwnCore", path: "../IosAwnCore"),
+        .package(url: "https://github.com/rafaelsetragni/IosAwnCore.git", from: "0.12.0"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "12.0.0"),
     ],
     targets: [
