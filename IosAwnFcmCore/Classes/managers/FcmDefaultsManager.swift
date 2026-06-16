@@ -46,5 +46,4 @@ public class FcmDefaultsManager {
         get { return Int64(userDefaults.object(forKey: FcmDefinitions.DART_BG_HANDLE) as? Int64 ?? 0) }
         set { userDefaults.setValue(newValue, forKey: FcmDefinitions.DART_BG_HANDLE) }
     }
-    
 }

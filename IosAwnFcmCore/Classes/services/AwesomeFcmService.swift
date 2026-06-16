@@ -7,6 +7,8 @@
 
 import Foundation
 import IosAwnCore
+import UIKit
+import UserNotifications
 
 open class AwesomeFcmService {
     static let TAG = "AwesomeFcmService"
@@ -271,7 +273,7 @@ open class AwesomeFcmService {
         notification.content?.createdLifeCycle = initialLifeCycle
         notification.content?.displayedLifeCycle = initialLifeCycle
         contentInProgress.userInfo[Definitions.NOTIFICATION_MODEL_CONTENT] = notification.toMap()
-        
+
         if (userInfo["gcm.n.noui"] as? Bool) ?? false { return true }
         
         try NotificationSenderAndScheduler.send(
