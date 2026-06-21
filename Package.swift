@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "IosAwnFcmCore", targets: ["IosAwnFcmCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/JeeMateTeam/IosAwnCore.git", branch: "main"),
+        .package(url: "https://github.com/JeeMateTeam/IosAwnCore.git", from: "0.12.1"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "12.0.0"),
     ],
     targets: [
