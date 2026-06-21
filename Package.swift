@@ -13,7 +13,8 @@ let package = Package(
         .library(name: "IosAwnFcmCore", targets: ["IosAwnFcmCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/rafaelsetragni/IosAwnCore.git", from: "0.12.0"),
+        // Monorepo local development: IosAwnCore lives alongside this package.
+        .package(path: "../IosAwnCore"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "12.0.0"),
     ],
     targets: [
