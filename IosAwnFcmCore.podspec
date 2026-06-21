@@ -15,11 +15,11 @@ Pod::Spec.new do |s|
   Awesome Notifications Firebase Messaging Core to enable push notifications using all awesome notification features
                        DESC
 
-  s.homepage         = 'https://github.com/rafaelsetragni/IosAwnFcmCore'
+  s.homepage         = 'https://github.com/JeeMateTeam/IosAwnFcmCore'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Copyright', :file => 'LICENSE' }
   s.author           = { 'Rafael Setragni' => '40064496+rafaelsetragni@users.noreply.github.com' }
-  s.source           = { :git => 'https://github.com/rafaelsetragni/IosAwnFcmCore.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/JeeMateTeam/IosAwnFcmCore.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.dependency 'IosAwnCore', '~> 0.12.0'
